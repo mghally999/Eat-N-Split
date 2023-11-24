@@ -23,14 +23,24 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 20px 15px;
 }
 
 .app {
   min-height: 66vh;
   display: grid;
-  grid-template-columns: 34rem 44rem;
+  grid-template-columns: repeat(2, 1fr);
   column-gap: 4rem;
   align-items: start;
+}
+
+@media screen and (max-width: 800px) {
+  .app {
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-gap: 35px;
+  }
 }
 
 .button {
